@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Routine Tracker Clock</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+
+    <header>
+        <h1>
+            ✦ ROUTINE TRACKER CLOCK ✦
+        </h1>
+
+        <button id="themeBtn">
+            🌙
+        </button>
+    </header>
+    <section class="clock-section">
+
+        <h2>
+            <i class="fa-regular fa-clock"></i>
+            DIGITAL CLOCK
+        </h2>
+
+        <div id="clock">
+            00:00:00
+        </div>
+
+        <div id="date">
+            Date Here
+        </div>
+
+    </section>
+    <section class="routine-section">
+
+        <h2>
+            <i class="fa-solid fa-clipboard-list"></i>
+            ROUTINE TRACKER
+        </h2>
+
+        <div class="task-input">
+
+            <input
+                type="text"
+                id="taskName"
+                placeholder="Task Name">
+
+            <input
+                type="time"
+                id="taskTime">
+
+            <button onclick="addTask()">
+                ADD TASK
+            </button>
+
+        </div>
+
+        <ul id="taskList">
+
+        </ul>
+
+        <div class="progress-container">
+
+            <h3>
+                Progress :
+                <span id="progressText">
+                    0%
+                </span>
+            </h3>
+
+            <div class="progress-bar">
+
+                <div id="progressFill">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="tools">
+
+        <!-- ALARM -->
+
+        <div class="card alarm">
+
+            <h2>
+                ⏰ ALARM
+            </h2>
+
+            <input
+                type="time"
+                id="alarmTime">
+
+            <button onclick="setAlarm()">
+                SET ALARM
+            </button>
+
+            <p id="alarmStatus">
+                No alarm set
+            </p>
+
+        </div>
+
+        <div class="card stopwatch">
+
+            <h2>
+                ⏱ STOPWATCH
+            </h2>
+
+            <div id="stopwatch">
+                00:00:00
+            </div>
+
+            <div class="btn-group">
+
+                <button onclick="startStopwatch()">
+                    Start
+                </button>
+
+                <button onclick="pauseStopwatch()">
+                    Pause
+                </button>
+
+                <button onclick="resetStopwatch()">
+                    Reset
+                </button>
+
+            </div>
+
+        </div>
+
+        <div class="card timer">
+
+            <h2>
+                ⌛ TIMER
+            </h2>
+
+            <input
+                type="number"
+                id="timerInput"
+                placeholder="Seconds">
+
+            <button onclick="startTimer()">
+                START TIMER
+            </button>
+
+            <div id="timerDisplay">
+                00
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+        🚀 Discipline today, success tomorrow.
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
